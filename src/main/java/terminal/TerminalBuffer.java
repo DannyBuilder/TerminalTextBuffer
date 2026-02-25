@@ -203,7 +203,7 @@ public class TerminalBuffer {
      * into scrollback and all remaining lines shift up by one row.
      */
     public void insertLineAtBottom() {
-        Line evicted = screen.removeFirst();
+        Line evicted = screen.remove(0);
         pushToScrollback(evicted.deepCopy());
         evicted.fill(' ', TerminalColor.DEFAULT, TerminalColor.DEFAULT, TerminalStyle.DEFAULT);
         screen.add(evicted);
