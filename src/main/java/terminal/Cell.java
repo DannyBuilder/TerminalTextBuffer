@@ -57,6 +57,38 @@ public class Cell {
     }
 
     /**
+     * A setter for the specific field
+     * @param character char - the new char
+     */
+    public void setCharacter(char character) {
+        this.character = character;
+    }
+
+    /**
+     * A setter for the specific field
+     * @param foreground TerminalColor - new foreground color
+     */
+    public void setForeground(TerminalColor foreground) {
+        this.foreground = foreground;
+    }
+
+    /**
+     * A setter for the specific field
+     * @param background - TerminalColor - new background color
+     */
+    public void setBackground(TerminalColor background) {
+        this.background = background;
+    }
+
+    /**
+     * A setter for the specific field
+     * @param style TerminalStyle - the new style
+     */
+    public void setStyle(TerminalStyle style) {
+        this.style = style;
+    }
+
+    /**
      * Resets the cell to default values
      */
     public void reset() {
