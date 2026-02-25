@@ -49,7 +49,7 @@ public class TextAttributes {
      * Converts the three independent style flags to the TerminalStyle needed by Cell
      * @return TerminalStyle - the style of the terminal with the specified values
      */
-    public TerminalStyle toTerminalStyle() {
+    public TerminalStyle toStyle() {
         return new TerminalStyle(bold, italic, underline);
     }
 
