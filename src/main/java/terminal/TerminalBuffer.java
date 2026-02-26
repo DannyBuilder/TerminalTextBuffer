@@ -277,7 +277,7 @@ public class TerminalBuffer {
     /**
      * Returns the entire screen as a newline-delimited String.
      * Each line has trailing spaces stripped. Rows are ordered top to bottom.
-     * @return String the string line by line stargint from the top line
+     * @return String the string line by line starting from the top line
      */
     public String getScreenContent() {
         StringBuilder sb = new StringBuilder(height * (width + 1));
@@ -331,7 +331,7 @@ public class TerminalBuffer {
     }
 
     /**
-     * Get line that gets the line on screeen + scrollback combined
+     * Get line that gets the line on screen + scrollback combined
      * @param absRow int - the row to consider
      * @return String  the string of thr row
      */
@@ -347,7 +347,7 @@ public class TerminalBuffer {
      * return the textAttributes of a cell anywhere in the screen + scrollback
      * @param col int - column
      * @param absRow int - the absolute row of the overall thing
-     * @return TextAttributes - the Textattributes of the cell
+     * @return TextAttributes - the Text attributes of the cell
      */
     public TextAttributes getAttributesAt(int col, int absRow) {
         Cell cell;
@@ -483,7 +483,7 @@ public class TerminalBuffer {
      * Checks if a given index is inside the screen bounds
      * @param col int - the given column
      * @param row int - the given row
-     * @throws IndexOutOfBoundsException if the col, row is outside of the bounds
+     * @throws IndexOutOfBoundsException if the col, row is outside the bounds
      */
     private void checkScreenBounds(int col, int row) {
         checkRowBounds(row);
@@ -494,7 +494,7 @@ public class TerminalBuffer {
     /**
      * Checks if a given index is inside the scrollback bounds
      * @param sbRow int - the int of the row to check
-     * @throws IndexOutOfBoundsException if the col, row is outside of the bounds
+     * @throws IndexOutOfBoundsException if the col, row is outside the bounds
      */
     private void checkScrollbackBounds(int sbRow) {
         if (sbRow < 0 || sbRow >= scrollback.size())

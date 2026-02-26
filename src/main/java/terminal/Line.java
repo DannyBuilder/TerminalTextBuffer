@@ -27,11 +27,6 @@ public class Line {
         }
     }
 
-    /**
-     * Getter for the width
-     * @return int - the width of the line
-     */
-    public int getWidth() { return width; }
 
     /**
      * Getter for a cell from the line
@@ -53,13 +48,6 @@ public class Line {
         cells[col].set(ch, fg, bg, style);
     }
 
-    /**
-     * Resets a single cell to default (space, DEFAULT colors, DEFAULT style).
-     */
-    public void clearCell(int col) {
-        checkBounds(col);
-        cells[col].reset();
-    }
 
     /**
      * Fills the whole line with the same cell.
