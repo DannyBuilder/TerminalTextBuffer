@@ -20,6 +20,16 @@ When the terminal scrolls (`insertLineAtBottom`), the top screen line is deep-co
 
 ---
 
+## Build and run
+
+```bash
+mvn test
+```
+
+Requires Java 17 and Maven.
+
+---
+
 ## Design decisions
 
 ### `Cell` — class, not an int
